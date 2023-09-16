@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         throw new Error("Invaild ID");
      }
 
-     const notifications = await prisma.notifications.findMany({
+     const notifications = await prisma.notification.findMany({
         where:{
             userId,
         },
