@@ -42,14 +42,14 @@ export const authOptions: AuthOptions = {
       }
     })
   ],
-  debug: process.env.NODE_ENV === 'development',
-  session: {
-    strategy: 'jwt',
-  },
+  debug: process.env.NODE_ENV === 'production',
   jwt: {
     secret: process.env.NEXTAUTH_JWT_SECRET,
   },
   secret: process.env.NEXTAUTH_SECRET,
+  session: {
+    strategy: 'jwt',
+  },
 };
 
 export default NextAuth(authOptions);
